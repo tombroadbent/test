@@ -1,6 +1,6 @@
 
 this is the file a that we are editing
 
-I have added 2 lines to this file
+I have edited this line in this file
 
 I'm going to add this line now
