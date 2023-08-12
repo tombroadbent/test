@@ -1,4 +1,6 @@
 
 this is the file a that we are editing
 
+I have edited this line in this file // this is where the merge conflict was
+
 I'm going to add this line now
