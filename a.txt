@@ -1,5 +1,5 @@
 
-this is the file a that we are editing
+this is the file a that we are editing shld be safe to edit this line
 
 I have edited this line in this file // this is where the merge conflict was
 
