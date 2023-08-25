@@ -3,7 +3,7 @@ this is the file a that we are editing shld be safe to edit this line
 
 I have edited this line in this file // this is where the merge conflict was
 
-I'm going to add this line now and another word or two
+I'm going to add this line now and another word or two or three
 
 1
 2
