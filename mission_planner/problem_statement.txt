@@ -1,0 +1,8 @@
+
+to schedule the exit date for a missionary, the 6-week transfer cycle needs to be considered
+
+a mission is 18m (female) or 2y (male)
+
+a missionary gets a start date assigned
+
+the missionary exit date is the closest transfer date to the completion date (18m or 2y) 
