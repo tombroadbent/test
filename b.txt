@@ -1,6 +1,10 @@
 this is another file called b.txt
 
+// this is Christians area
+
 this file has many lines
+
+// end Ch area
 
 this file has many lines
 this file has many lines
