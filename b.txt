@@ -6,6 +6,8 @@ this file has many lines
 this line too
 and another line
 
+Christian is adding this line
+
 // end Ch area
 
 this file has many lines
