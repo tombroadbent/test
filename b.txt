@@ -3,6 +3,8 @@ this is another file called b.txt
 // this is Christians area
 
 this file has many lines
+this line too
+and another line
 
 // end Ch area
 
