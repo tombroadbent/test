@@ -6,3 +6,51 @@ a mission is 18m (female) or 2y (male)
 a missionary gets a start date assigned
 
 the missionary exit date is the closest transfer date to the completion date (18m or 2y) 
+
+-------------------------------------------------------------------------------------------------
+Assumption: Only consider the mission of the missionary
+Assumption: Only consider “normal” completion (not getting release or mission reorganization) 
+Context/detail: The start date is the beginning of MTC. MTC times vary on missions. 
+Context/detail: Closest transfer data could be one before or one after.
+
+Inputs:
+Gender (str [m | f])
+Start date str ISO 8601
+Transfer date for that mission ISO 8601 
+Validation:
+Transfer date must be less than completion date -6 weeks 
+
+
+Output:
+Two closest transfer dates. One before and one after str ISO 8601 
+Completion date str ISO 8601
+
+algorithm:
+Prompt the user for gender 
+Prompt the user for start date 
+Get the completion date.
+Prompt the user for the transfer date.
+Compute nearest transfer date of completion date 
+Using transfer date, use a loop to add 6 weeks until we reach or pass one of completion date. 
+Loop every 6 weeks 
+If completion date is reached 
+If first loop stops, get one more transfer after completion date. 
+Variables to keep track of previous and current transfer 
+Output transfer dates 
+
+algorithm for while loop:
+Start at t0 
+Add 6 weeks to t0 to get t1
+T0 in e0 and t1 in e1 
+E0 is < c AND e1 >= c 
+
+Pseudo Code:
+Ec = t 
+En = Ec + 6
+While Ec < c & En >= c
+	Ec = En 
+	En = Ec + 6
+
+Idea:
+Parameter about transfer
+
