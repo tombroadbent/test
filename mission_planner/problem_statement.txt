@@ -45,11 +45,18 @@ T0 in e0 and t1 in e1
 E0 is < c AND e1 >= c 
 
 Pseudo Code:
-Ec = t 
-En = Ec + 6
-While Ec < c & En >= c
+first make sure it is before the completion date
+
+If t >= c:
+	Print Must be less than c 
+
+Else:
 	Ec = En 
 	En = Ec + 6
+	while Ec < c and En >= c:
+		Ec = En 
+		En = Ec + 6
+
 
 Idea:
 Parameter about transfer
