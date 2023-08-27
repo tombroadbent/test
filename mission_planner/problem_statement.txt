@@ -45,17 +45,29 @@ T0 in e0 and t1 in e1
 E0 is < c AND e1 >= c 
 
 Pseudo Code:
-first make sure it is before the completion date
-
-If t >= c:
-	Print Must be less than c 
-
+Gender = str(input(“What is your gender? (M/F) “))
+Duration = 0
+If gender.lower() = “m”:
+	Duration = 24
+Elif gender.lower() = “f”
+	Duration = 18
+Start_date = str(input(“What is your start date? (YYYY-MM-DD)  “))
+Completion_date = start_date + duration 
+Transfer_date = str(input(“What is the next transfer date? (YYYY-MM-DD) “))
+transferBeforeCompletion = transfer_date
+transferAfterCompletion = transfer_date + 6 weeks
+If t >= Completion_date:
+	Print Must be less than completion date
 Else:
-	Ec = En 
-	En = Ec + 6
-	while Ec < c and En >= c:
-		Ec = En 
-		En = Ec + 6
+	transferBeforeCompletion = transferAfterCompletion 
+	transferAfterCompletion = transferBeforeCompletion + 6
+while transferBeforeCompletion < Completion_date and transferAfterCompletion >= Completion_date:
+	transferBeforeCompletion = transferAfterCompletion 
+	transferAfterCompletion = transferBeforeCompletion + 6
+print("Closest transfer date before completion:", transferBeforeCompletion)
+print("Closest transfer date after completion:", transferAfterCompletion)
+if transferBeforeCompletion <= Completion_date <= transferAfterCompletion:
+        print("Congratulations! Transfer is on completion date")
 
 
 Idea:
