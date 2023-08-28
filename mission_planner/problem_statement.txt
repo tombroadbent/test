@@ -47,9 +47,9 @@ E0 is < c AND e1 >= c
 Pseudo Code:
 gender = str(input(“What is your gender? (M/F) “))
 if gender.lower() = “m”:
-	duration = 24
+	duration = 24 // good to specify units ex. 24m
 elif gender.lower() = “f”
-	duration = 18
+	duration = 18 // units 18m
 else:
 	print("not an option")
 start_date = str(input(“What is your start date? (YYYY-MM-DD)  “))
@@ -61,10 +61,10 @@ If t >= completion_date:
 	print("Must be less than completion date")
 Else:
 	transferBeforeCompletion = transfer_date 
-	transferAfterCompletion = transferBeforeCompletion + 6
+	transferAfterCompletion = transferBeforeCompletion + 6 // units 6w
 	while transferAfterCompletion < completion_date:
 		transferBeforeCompletion = transferAfterCompletion 
-		transferAfterCompletion = transferBeforeCompletion + 6
+		transferAfterCompletion = transferBeforeCompletion + 6 // units 6w
 if transferBeforeCompletion <= completion_date <= transferAfterCompletion: // will this ever happen?
         print("Congratulations! Transfer is on completion date")
 else:
