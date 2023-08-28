@@ -65,7 +65,7 @@ Else:
 	while transferAfterCompletion < completion_date:
 		transferBeforeCompletion = transferAfterCompletion 
 		transferAfterCompletion = transferBeforeCompletion + 6
-if transferBeforeCompletion <= completion_date <= transferAfterCompletion:
+if transferBeforeCompletion <= completion_date <= transferAfterCompletion: // will this ever happen?
         print("Congratulations! Transfer is on completion date")
 else:
 	print("Closest transfer date before completion:", transferBeforeCompletion)
