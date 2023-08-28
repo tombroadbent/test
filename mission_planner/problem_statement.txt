@@ -45,13 +45,14 @@ T0 in e0 and t1 in e1
 E0 is < c AND e1 >= c 
 
 Pseudo Code:
-gender = str(input(“What is your gender? (M/F) “))
-if gender.lower() = “m”:
-	duration = 24 // good to specify units ex. 24m
-elif gender.lower() = “f”
-	duration = 18 // units 18m
-else:
-	print("not an option")
+gender = str(input(“What is your gender? (M/F) “)).lower()
+if gender != 'm' and gender != 'f':
+	print("error message")
+if gender == 'm':
+	duration = 24 months
+elif gender == 'f':
+	duration = 18 months
+
 start_date = str(input(“What is your start date? (YYYY-MM-DD)  “))
 completion_date = start_date + duration 
 transfer_date = str(input(“What is the next transfer date? (YYYY-MM-DD) “))
@@ -59,17 +60,16 @@ transferBeforeCompletion = transfer_date
 transferAfterCompletion = transfer_date + 6 weeks
 If t >= completion_date:
 	print("Must be less than completion date")
-Else:
-	transferBeforeCompletion = transfer_date 
-	transferAfterCompletion = transferBeforeCompletion + 6 // units 6w
-	while transferAfterCompletion < completion_date:
-		transferBeforeCompletion = transferAfterCompletion 
-		transferAfterCompletion = transferBeforeCompletion + 6 // units 6w
-if transferBeforeCompletion <= completion_date <= transferAfterCompletion: // will this ever happen?
-        print("Congratulations! Transfer is on completion date")
-else:
-	print("Closest transfer date before completion:", transferBeforeCompletion)
-	print("Closest transfer date after completion:", transferAfterCompletion)
+
+transferBeforeCompletion = transfer_date 
+transferAfterCompletion = transferBeforeCompletion + 6w
+while transferAfterCompletion < completion_date:
+	transferBeforeCompletion = transferAfterCompletion 
+	transferAfterCompletion = transferBeforeCompletion + 6w
+
+print("Closest transfer date before completion:", transferBeforeCompletion)
+print("Closest transfer date after completion:", transferAfterCompletion)
+
 
 
 Idea:
