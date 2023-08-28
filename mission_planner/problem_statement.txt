@@ -45,31 +45,34 @@ T0 in e0 and t1 in e1
 E0 is < c AND e1 >= c 
 
 Pseudo Code:
-Gender = str(input(“What is your gender? (M/F) “))
-Duration = 0
-If gender.lower() = “m”:
-	Duration = 24
-Elif gender.lower() = “f”
-	Duration = 18
-Start_date = str(input(“What is your start date? (YYYY-MM-DD)  “))
-Completion_date = start_date + duration 
-Transfer_date = str(input(“What is the next transfer date? (YYYY-MM-DD) “))
+gender = str(input(“What is your gender? (M/F) “))
+if gender.lower() = “m”:
+	duration = 24
+elif gender.lower() = “f”
+	duration = 18
+else:
+	print("not an option")
+start_date = str(input(“What is your start date? (YYYY-MM-DD)  “))
+completion_date = start_date + duration 
+transfer_date = str(input(“What is the next transfer date? (YYYY-MM-DD) “))
 transferBeforeCompletion = transfer_date
 transferAfterCompletion = transfer_date + 6 weeks
-If t >= Completion_date:
-	Print Must be less than completion date
+If t >= completion_date:
+	print("Must be less than completion date")
 Else:
-	transferBeforeCompletion = transferAfterCompletion 
+	transferBeforeCompletion = transfer_date 
 	transferAfterCompletion = transferBeforeCompletion + 6
-while transferBeforeCompletion < Completion_date and transferAfterCompletion >= Completion_date:
-	transferBeforeCompletion = transferAfterCompletion 
-	transferAfterCompletion = transferBeforeCompletion + 6
-print("Closest transfer date before completion:", transferBeforeCompletion)
-print("Closest transfer date after completion:", transferAfterCompletion)
-if transferBeforeCompletion <= Completion_date <= transferAfterCompletion:
+	while transferAfterCompletion < completion_date:
+		transferBeforeCompletion = transferAfterCompletion 
+		transferAfterCompletion = transferBeforeCompletion + 6
+if transferBeforeCompletion <= completion_date <= transferAfterCompletion:
         print("Congratulations! Transfer is on completion date")
+else:
+	print("Closest transfer date before completion:", transferBeforeCompletion)
+	print("Closest transfer date after completion:", transferAfterCompletion)
 
 
 Idea:
 Parameter about transfer
+
 
